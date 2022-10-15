@@ -5,7 +5,11 @@ const Home = () => {
     const {user} = useContext(Authcontext)
     return (
         <div>
-            <h2>This is home for {user.displayName} </h2>
+            {user ?
+                <h2>This is home for {user.email} </h2>
+                :
+                <h2>sorry You are not log in</h2>
+            }
         </div>
     );
 };
